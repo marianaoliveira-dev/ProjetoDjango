@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <!-- bootstrap icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <style>
+        /* Estilização da Navbar */
+        .custom-navbar {
+            background-color: #5D4037;
+            /* Marrom escuro */
+            font-family: 'Merriweather', serif;
+            /* Fonte clássica */
+            padding: 15px 0;
+        }
+
+        .custom-navbar .nav-link {
+            color: #F5E1DA !important;
+            /* Bege claro */
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+            padding: 10px 15px;
+        }
+
+        .custom-navbar .nav-link:hover {
+            color: #D67C3C !important;
+            /* Laranja queimado */
+        }
+
+        .custom-navbar .navbar-brand {
+            color: #D67C3C !important;
+            /* Nome do site em laranja queimado */
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .custom-navbar .navbar-toggler {
+            border-color: #F5E1DA;
+            /* Ícone do menu responsivo bege */
+        }
+
+        .custom-navbar .navbar-toggler-icon {
+            filter: invert(1);
+            /* Deixa o ícone claro */
+        }
+    </style>
+    <link rel="stylesheet" href="{% static '/global/css/biografia.css' %}">
+    <title>{{ titulo }}</title>
+</head>
+<body class="card text">

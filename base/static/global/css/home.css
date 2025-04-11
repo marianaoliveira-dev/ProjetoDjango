@@ -1,0 +1,248 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+header {
+    padding: 10px 20px;
+    background-color: black;
+}
+
+.navegacao {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navegacao ul {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.navegacao ul li a {
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding-bottom: 4px ;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.navegacao ul li a:hover {
+    color: #ffff;
+    border-bottom: 1px solid #ffff;
+}
+.container {
+    position: relative;
+    display: inline-block;
+}
+img {
+    display: block;
+}
+.texto {
+    position: relative;
+    top: 5%;
+    left: 75%;
+    transform: translate(-40%,-2850%);
+    color: white;
+    font-size: 24px;
+    text-decoration: solid;
+}
+.introducao {
+    color: #ffff;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    /* border-radius: 10px; */
+    /* box-shadow: 1px 1px 10px rgb(114, 114, 114); */
+/* } */
+/* footer {
+    color: #ffff;
+    margin-top: 80px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}  */
+
+/* body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.navegacao {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(63, 63, 63);
+}
+
+.navegacao ul {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.navegacao ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding-bottom: 4px;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: inherit;
+}
+
+.navegacao ul li a:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+video {
+    display: block;
+}
+
+.texto {
+    position: absolute; /* Alterei para 'absolute' para melhor controle de posição */
+    /* top: 23%; /* Ajustei o valor para um posicionamento mais natural */
+    /* left: 50%;
+    transform: translateX(-50%); /* Ajustei o transform para centralizar horizontalmente */
+    /* color: white;
+    font-size: 24px;
+    text-decoration: solid;
+    font-weight: bold;
+}
+
+.introducao {
+    color: #fff;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+footer {
+    color: #fff;
+    margin-top: 80px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Courier New, monospace	;
+} */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+    padding: 10px 20px;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-bottom: 1px solid rgb(63, 63, 63);
+}
+
+.navegacao ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navegacao ul li {
+    display: inline;
+}
+
+.navegacao ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navegacao ul li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.container video {
+    width: 100%;
+    height: auto;
+}
+
+.texto {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 10px;
+}
+
+.introducao {
+    color: #fff;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.horse img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media (max-width: 768px) {
+    .navegacao {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navegacao ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .texto {
+        font-size: 18px;
+    }
+    .introducao {
+        font-size: medium;
+    }
+}
