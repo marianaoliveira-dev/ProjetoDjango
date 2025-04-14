@@ -6,8 +6,11 @@
             <div class="container">
                 <h2>Receba nossas novidades</h2>
                 <p>Cadastre seu e-mail para receber notícias e lançamentos em primeira mão.</p>
-                <form class="newsletter-form">
+                <form class="newsletter-form" action="." method="post">
+                    {% csrf_token %}
+                    <label for="nome" class="form-label">Nome:</label>
                     <input type="nome" placeholder="Digite seu nome" required>
+                    <label for="correio" class="form-label">Email:</label>
                     <input type="email" placeholder="Digite seu e-mail" required>
                     <button type="submit">Inscrever-se</button>
                 </form>
