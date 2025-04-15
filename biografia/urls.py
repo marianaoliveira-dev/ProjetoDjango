@@ -10,4 +10,5 @@ urlpatterns = [
 urlpatterns = [
     path('', views.biografia, name='biografia'),
     path('gravar/', views.gravar, name='gravar'),
+    path('mostrar/', views.exibe, name='mostrar'),
 ]

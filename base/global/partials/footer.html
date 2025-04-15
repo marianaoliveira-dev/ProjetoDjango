@@ -14,6 +14,20 @@
                     <input type="email" placeholder="Digite seu e-mail" required>
                     <button type="submit">Inscrever-se</button>
                 </form>
+                <table class="table table-striped">
+                    <tr>
+                        <td>id</td>
+                        <td>nome</td>
+                        <td>email</td>
+                    </tr>
+                    {% for pessoa in pessoas %}
+                    <tr>
+                        <td>{{pessoa.id_pessoa}}</td>
+                        <td>{{pessoa.nome}}</td>
+                        <td>{{pessoa.email}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
             </div>
         </section>
         <section class="footer-container">

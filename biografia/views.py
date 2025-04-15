@@ -3,6 +3,8 @@
 # Create your views here.
 from django.shortcuts import render
 
+from biografia.models import Pessoa
+
 # Create your views here.
 def biografia(request):
     contexto = {
@@ -21,3 +23,15 @@ def gravar(request):
     nova_pessoa.save()
     
     return biografia(request)
+
+def exibe(request):
+    # exibir todas as pessoas
+    exibe_pessoas = {
+        'pessoas': Pessoa.objects.all()
+    }
+    # retornar os dados para a página
+    return render(
+        request,
+        'biografia/mostrar.html',
+        exibe_pessoas,
+    )
