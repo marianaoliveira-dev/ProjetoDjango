@@ -6,28 +6,37 @@
             <div class="container">
                 <h2>Receba nossas novidades</h2>
                 <p>Cadastre seu e-mail para receber notícias e lançamentos em primeira mão.</p>
-                <form class="newsletter-form" action="{% url 'gravar' %}" method="post">
+                <form class="newsletter-form" action="{% url 'gravar' %}" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     <label for="nome" class="form-label">Nome:</label>
                     <input type="text" name="nome" placeholder="Digite seu nome" required>
-                    <label for="correio" class="form-label">Email:</label>
+
+                    <label for="email" class="form-label">Email:</label>
                     <input type="email" name="email" placeholder="Digite seu e-mail" required>
+
                     <button type="submit">Inscrever-se</button>
                 </form>
-                <table class="table table-striped">
+                {% comment %} <table class="table table-striped table-bg-secundary">
                     <tr>
-                        <td>id</td>
                         <td>nome</td>
                         <td>email</td>
                     </tr>
-                    {% for pessoa in pessoas %}
-                    <tr>
-                        <td>{{pessoa.id_pessoa}}</td>
-                        <td>{{pessoa.nome}}</td>
-                        <td>{{pessoa.email}}</td>
-                    </tr>
+                    {% for convidado in convidados %}
+                        <tr>
+                            <td>{{convidado.nome}}</td>
+                            <td>{{convidado.email}}</td>
+                            <td>
+                               <a href="{% url 'editar' convidado.id %}">Editar</a>
+                               <a href="{% url 'apagar' convidado.id %}">Apagar</a>
+                             
+                              
+                              
+                            </td>
+                        </tr>
+                    {% empty %}
+                        
                     {% endfor %}
-                </table>
+                </table> {% endcomment %}
             </div>
         </section>
         <section class="footer-container">
