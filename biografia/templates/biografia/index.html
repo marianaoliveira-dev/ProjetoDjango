@@ -3,6 +3,15 @@
 {% block main %}
 {% load static %}
 
+{% if inscrito_sucesso %}
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+    successModal.show();
+  });
+</script>
+{% endif %}
+
 <main>
     <section class="container mt-3">
         <div class="row align-items-start">
@@ -409,5 +418,23 @@
         </article>
     </section>
 </main>
+
+<!-- Modal Bootstrap -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="successModalLabel">Sucesso!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          Cadastro realizado com sucesso!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {% endblock main %}

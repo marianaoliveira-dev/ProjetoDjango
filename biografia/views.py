@@ -16,16 +16,31 @@ def biografia(request):
                   )
 
 def gravar(request):
-    # Salvar os dados da tela para o banco
-    print(request.POST) # debug de request
-    nova_pessoa = Convidado() #cria o obj pra inserir no banco de dados
-    
-    nova_pessoa.nome = request.POST.get('nome')
-    nova_pessoa.email = request.POST.get('email')
-    
-    nova_pessoa.save()
-    
-    return biografia(request)
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        email = request.POST.get('email')
+
+        nova_pessoa = Convidado(nome=nome, email=email)
+        nova_pessoa.save()
+
+        convidados = Convidado.objects.all()
+        # return render(request, 'biografia/index.html', {
+        #     'convidados': convidados,
+        #     'inscrito_sucesso': True
+        # })
+        
+        # html_extra = "<p style='color: green;'>Cadastro realizado com sucesso!</p>"
+
+        return render(request, 'biografia/index.html', {
+            'convidados': convidados,
+            'inscrito_sucesso': True,
+            # 'html_extra': html_extra
+        })
+
+    # Se não for POST, apenas renderiza normalmente
+    convidados = Convidado.objects.all()
+    return render(request, 'biografia/index.html', {'convidados': convidados})
+
 
 def exibe(request):
     convidados = Convidado.objects.all() #chama os dados do banco de dados
@@ -33,7 +48,7 @@ def exibe(request):
     
     exibe_convidados = {
         'convidados': Convidado.objects.all()
-    }
+    } 
     context = {
         'convidados': convidados
     }
